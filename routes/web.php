@@ -41,6 +41,19 @@ Route::prefix('toko')->group(function(){
  Route::get('/about',
     [TokoController::class, 'about']);
 
+ Route::get('/admin',
+    [TokoController::class, 'admin'])->name('produk.admin');
+
+ Route::get('/create',
+    [TokoController::class, 'create'])->name('produk.create');
+
+ Route::post('/store',
+    [TokoController::class, 'store'])->name('produk.store');
+
+ Route::get('/customer',
+    [TokoController::class, 'customer'])->name('produk.customer');
+    
 });
+
 
 
